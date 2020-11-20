@@ -85,10 +85,6 @@ func MergeFDF(fdfPath, pdfPath, destpath string, flatten bool) error {
 	if err != nil {
 		return err
 	}
-	_, err = os.Stat(destpath)
-	if err != nil {
-		return err
-	}
 
 	// Make sure we have PDFtk
 	_, err = exec.LookPath("pdftk")
